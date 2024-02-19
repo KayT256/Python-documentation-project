@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width: device-width, initial-scale: 1.0">
+    <title>Python Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <nav>
+        <header>
+            <h1 id="title">Python Documentation</h1>
+            <p id="sub-title">A quick guide to programming with Python</p>
+        </header>
+
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#basic-concepts">Basic concepts</a></li>
+            <li><a href="#control-structures">Control structures</a></li>
+            <li><a href="#functions">Functions</a></li>
+            <li><a href="#data-structures">Data structures</a></li>
+            <li><a href="#modules-and-packages">Modules and Packages</a></li>
+            <li><a href="#error-handling">Error handling</a></li>
+            <li><a href="#working-with-files">Working with files</a></li>
+            <li><a href="#introduction-to-oop">Introduction to OOP</a></li>
+            <li><a href="#standard-library-highlights">Standard library highlights</a></li>
+            <li><a href="#coding-best-practices">Coding best practices</a></li>
+            <li><a href="#learning-resources">Learning resources</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-doc">
+      <section id="introduction" class="main-section">
+        <header>Introduction</header>
+        <p>
+            Python is a high-level, interpreted programming language known for its simplicity and versatility.
+            It was created by Guido van Rossum and first released in 1991.
+            Python's design philosophy emphasizes code readability through the use of significant whitespace.
+            This makes it an excellent language for beginners and experts alike.
+        </p>
+        <p>
+            Python is used in a wide range of applications, from web development to data analysis, machine learning,
+            artificial intelligence, scientific computing, and more.
+            One of its key benefits is the vast standard library and the extensive ecosystem of third-party packages,
+            which provide tools for nearly every task.
+            Python's simplicity allows beginners to quickly start writing programs,
+            while its depth supports complex applications for advanced users.
+        </p>
+      </section>
+
+      <section id="basic-concepts" class="main-section">
+        <header>Basic concepts</header>
+        <section class="sub-section">
+            <header>The "Hello, World!" Program</header>
+            <p>One of the simplest Python programs you can write is the "Hello, World!" program. It demonstrates how to output text to the console</p>
+            <div class="code-block">
+                <code>
+                    print("Hello, World!");<br><br>
+                    <span class="comment"># Output: Hello, World!</span>
+                </code>
+            </div>
+        </section>
+        <section class="sub-section">
+            <header>Syntax Basics</header>
+
+            <ul>
+                <li>
+                    <b>Indentation:</b> Python uses indentation to define blocks of code.
+                    Consistent spacing is crucial, as different indentations signal different blocks.
+                    For example, all code within a loop or function must be indented under that loop or function: <br>
+                    <div class="code-block level-1">
+                        <code>
+                            if True:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;print("This is indented, so it's part of the if statement.")<br><br>
+                            <span class="comment"># Output: This is indented, so it's part of the if statement.</span>
+                        </code>
+                    </div>
+                </li>
+            
+                <li>
+                    <b>Variables:</b> Variables are used to store information that can be referenced and manipulated in your program. 
+                    In Python, you declare a variable by assigning it a value with the <code>=</code> operator: <br>
+                    <div class="code-block level-1">
+                        <code>
+                            my_variable = 10
+                        </code>
+                    </div>
+                </li>
+
+                <li>
+                    <b>Data Types:</b> Python has several data types, including integers <code>int</code>, floating-point numbers <code>float</code>, 
+                    strings <code>str</code>, and booleans <code>bool</code>. 
+                    Python is dynamically typed, so you don't need to declare the type of a variable explicitly. <br>
+                    <div class="code-block level-1">
+                        <code>
+                            an_integer = 5<br>
+                            a_float = 5.0<br>
+                            a_string = "Hello"<br>
+                            a_boolean = True
+                        </code>
+                    </div>
+                </li>
+            
+                <li>
+                    <b>Operators:</b> Python includes operators for calculations and comparisons. 
+                    For example, arithmetic operators include <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> for addition, subtraction, multiplication, and division. 
+                    Comparison operators include <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code> for equality, inequality, greater than, less than, greater than or equal to,
+                    and less than or equal to, respectively. <br>
+                    <div class="code-block level-1">
+                        <code>
+                            <span class="comment"># Arithmetic operation</span><br>
+                            result = 5 + 3 <span class="comment"># Equals 8</span><br><br>
+                            <span class="comment"># Comparison</span><br>
+                            is_equal = (result == 8) <span class="comment"># Evaluates to True</span>
+                        </code>
+                    </div>
+                </li>
+            </ul>
+        </section>
+      </section>
+
+      <section id="control-structures" class="main-section">
+        <header>Control structures</header>
+        <section class="sub-section">
+            <header>Conditional Statements and Loops</header>
+            <ul>
+                <li>
+                    <b>Conditional Statements:</b> Python uses <code>if</code>, <code>elif</code> (else if), and <code>else</code> to execute code based on conditions. 
+                    These statements allow you to branch your code depending on whether conditions are true or false.
+                    <div class="code-block level-1">
+                        <code>
+                            age = 18<br>
+                            if age >= 18:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;print("You are an adult.")<br>
+                            elif age > 13:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;print("You are a teenager.")<br>
+                            else:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;print("You are a child.") <br><br>
+                            <span class="comment"># Output: You are an adult.</span>
+                        </code>
+                    </div>
+                </li>
+            
+                <li>
+                    <b>Loops:</b> Python provides <code>for</code> and <code>while</code> loops to iterate over a sequence (like a list, tuple, or string)
+                    or execute a block of code multiple times.
+                    <ul>
+                        <li><b>For Loop:</b> Used for iterating over a sequence
+                            <div class="code-block level-2">
+                                <code>
+                                    fruits = ["apple", "banana", "cherry"]<br>
+                                    for fruit in fruits:<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;print(fruit)<br><br>
+                                    <span class="comment">
+                                        # Output: <br>  
+                                        # &nbsp;&nbsp;&nbsp;&nbsp; apple <br>
+                                        # &nbsp;&nbsp;&nbsp;&nbsp; banana <br>
+                                        # &nbsp;&nbsp;&nbsp;&nbsp; cherry <br>
+                                    </span>
+                                </code>
+                            </div>
+                        </li>
+
+                        <li><b>While Loop:</b> Repeats a block of code as long as a condition is true
+                            <div class="code-block level-2">
+                                <code>
+                                    count = 0<br>
+                                    while count &lt; 5:<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;print(count)<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;count += 1   <span class="comment"># This is the same as count = count + 1</span><br><br>
+                                    <span class="comment">
+                                        # Output: <br>  
+                                        # &nbsp;&nbsp;&nbsp;&nbsp; 0 <br>
+                                        # &nbsp;&nbsp;&nbsp;&nbsp; 1 <br>
+                                        # &nbsp;&nbsp;&nbsp;&nbsp; 2 <br>
+                                        # &nbsp;&nbsp;&nbsp;&nbsp; 3 <br>
+                                        # &nbsp;&nbsp;&nbsp;&nbsp; 4 <br>
+                                    </span>
+                                </code>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section class="sub-section">
+            <header>Using <code>break</code>, <code>continue</code>, and <code>pass</code></header>
+            <ul>
+                <li><b>break:</b> Exits the loop</li>
+                <li><b>continue:</b> Skips the rest of the code inside the loop for the current iteration and moves to the next iteration</li>
+                <li><b>pass:</b> Does nothing; used as a placeholder in situations where syntax requires a statement but you do not want any command or code to execute</li>
+                <div class="code-block level-1">
+                    <code>
+                        <span class="comment"># In this example, numbers will be printed until the loop reaches 5.</span><br>
+                        <span class="comment"># Even numbers are skipped due to the continue statement.</span><br>
+                        for number in range(1, 10):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;if number == 5:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break <span class="comment"># Exit the loop when number is 5</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;if number % 2 == 0:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue <span class="comment"># Skip even numbers</span><br><br>
+                        <span class="comment">
+                            # Output: <br>  
+                            # &nbsp;&nbsp;&nbsp;&nbsp; 2 <br>
+                            # &nbsp;&nbsp;&nbsp;&nbsp; 4 <br>
+                        </span>
+                    </code>
+                </div>
+            </ul>
+        </section>
+      </section>
+
+      <section id="functions" class="main-section">
+        <header>Functions</header>
+        <section class="sub-section">
+            <header>Defining Functions, Arguments, and Return Values</header>
+
+            <p>
+                Functions in Python are defined using the  <code>def</code> keyword, followed by the function name and parentheses  <code>()</code> containing any parameters. 
+                Functions allow you to encapsulate a task, making it reusable and organized.
+            </p>
+            <div class="code-block">
+                <code>
+                    def greet(name):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;return f"Hello, {name}!"
+                </code>
+            </div>
+
+            <p>
+                To call a function, use its name followed by parentheses.
+                If the function expects arguments, provide them inside the parentheses:
+            </p>
+            <div class="code-block">
+                <code>
+                    message = greet("Alice")<br>
+                    print(message)<br><br>
+                    <span class="comment"># Output: Hello, Alice!</span>
+                </code>
+            </div>
+        </section>
+
+        <section class="sub-section">
+            <header>Scope of Variables</header>
+            <p>Variables in Python have a scope that determines where they can be accessed. The two main scopes are:</p>
+            <ul>
+                <li>
+                    <b>Local Scope:</b> Variables created inside a function belong to the local scope of that function, and can only be used inside that function.
+                </li>
+                <li>
+                    <b>Global Scope:</b> Variables created in the main body of a Python script are global and can be accessed anywhere in the script, including by functions.
+                </li>
+                <div class="code-block level-1">
+                    <code>
+                        x = "global"  <span class="comment"># Global scope</span><br><br>
+                        def myfunc():<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;y = "local" <span class="comment"># Local scope</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print(x) <span class="comment"># Accesses the global variable</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print(y) <span class="comment"># Accesses the local variable</span><br><br>
+                        myfunc()<br>
+                        print(x) <span class="comment"># Works</span><br>
+                        <span class="comment">
+                            # print(y) # This would raise an error because y is not accessible here<br><br>
+                            # Output: <br>
+                            # &nbsp;&nbsp;&nbsp;&nbsp;global<br>
+                            # &nbsp;&nbsp;&nbsp;&nbsp;local<br>
+                            # &nbsp;&nbsp;&nbsp;&nbsp;global
+                        </span>
+                    </code>
+                </div>
+            </ul>
+        </section>
+      </section>
+
+      <section id="data-structures" class="main-section">
+        <header>Data Structures</header>
+        <section class="sub-section">
+            <header>Overview of Lists, Tuples, Dictionaries, and Sets</header>
+            <ul>
+                <li>
+                    <b>Lists:</b> Ordered collections of items that can be changed (mutable). 
+                    Lists are created by placing items inside square brackets <code>[]</code>, separated by commas.
+                    <div class="code-block level-1">
+                        <code>
+                            fruits = ["apple", "banana", "cherry"]<br>
+                            fruits.append("orange") <span class="comment"># Adding an item</span><br>
+                            print(fruits)<br><br>
+                            <span class="comment"># Output: ["apple", "banana", "cherry", "orange"]</span>
+                        </code>
+                    </div>
+                </li>
+
+                <li>
+                    <b>Tuples:</b> Ordered collections of items that cannot be changed (immutable). 
+                    Tuples are created by placing items inside parentheses <code>()</code>, separated by commas.
+
+                    <div class="code-block level-1">
+                        <code>
+                            coordinates = (10.0, 20.0)<br>
+                            print(coordinates)<br><br>
+                            <span class="comment"># Output: (10.0, 20.0)</span>
+                        </code>
+                    </div>
+                </li>
+
+                <li>
+                    <b>Dictionaries:</b>  Unordered collections of key-value pairs. 
+                    Dictionaries are created by placing items inside curly braces <code>{}</code>, with each key separated from its value by a colon <code>:</code>.
+
+                    <div class="code-block level-1">
+                        <code>
+                            person = {"name": "Alice", "age": 30}<br>
+                            person["email"] = "alice@example.com" <span class="comment"># Adding a new key-value pair</span><br>
+                            print(person)<br><br>
+                            <span class="comment"># Output: {"name": "Alice", "age": 30, "email": "alice@example.com"}</span>
+                        </code>
+                    </div>
+                </li>
+
+                <li>
+                    <b>Sets:</b> Unordered collections of unique items. Sets are created by placing items inside curly braces <code>{}</code>, separated by commas. 
+                    They are similar to dictionaries but only contain keys.
+
+                    <div class="code-block level-1">
+                        <code>
+                            colors = {"red", "green", "blue"}<br>
+                            colors.add("yellow") <span class="comment"># Adding an item</span><br>
+                            print(colors)<br><br>
+                            <span class="comment"># Output: {"red", "green", "blue", "yellow"}</span>
+                        </code>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="sub-section">
+            <header>Basic Operations: Indexing, Slicing, and Iterating</header>
+            <ul>
+                <li>
+                    <b>Indexing:</b> Accessing an item in a list or tuple by its position.
+
+                    <div class="code-block level-1">
+                        <code>
+                            print(fruits[1])<br><br>
+                            <span class="comment"># Output: banana</span>
+                        </code>
+                    </div>
+                </li>
+
+                <li>
+                    <b>Slicing:</b> Accessing a subset of a list or tuple.
+
+                    <div class="code-block level-1">
+                        <code>
+                            print(fruits[1:3])<br><br>
+                            <span class="comment"># Output: ['banana', 'cherry']</span>
+                        </code>
+                    </div>
+                </li>
+
+                <li>
+                    <b>Iterating:</b> Looping through each item in a list, tuple, dictionary, or set.
+
+                    <div class="code-block level-1">
+                        <code>
+                            for fruit in fruits:<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;print(fruit)<br><br>
+                            for key, value in person.items():<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; print(f"{key}: {value}")<br><br>
+                            <span class="comment">
+                                # Output:<br>
+                                # &nbsp;&nbsp;&nbsp;&nbsp;["apple", "banana", "cherry", "orange"]<br>
+                                # &nbsp;&nbsp;&nbsp;&nbsp;name: Alice<br>
+                                # &nbsp;&nbsp;&nbsp;&nbsp;age: 30<br>
+                                # &nbsp;&nbsp;&nbsp;&nbsp;email: alice@example.com<br>
+                            </span>
+                        </code>
+                    </div>
+                </li>
+            </ul>
+        </section>
+      </section>
+
+      <section class="main-section">
+        <header></header>
+      </section>
+      <section class="main-section">
+        <header></header>
+      </section>
+      <section class="main-section">
+        <header></header>
+      </section>
+      <section class="main-section">
+        <header></header>
+      </section>
+      <section class="main-section">
+        <header></header>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
